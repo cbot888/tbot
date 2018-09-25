@@ -12,7 +12,7 @@ if(date('H')>=6)
   $yeke_no = 4*(date('H')-6)+floor(date('i')/15)+1;
 else
   $yeke_no = 4*(date('H')+18)+floor(date('i')/15)+1;
-$str = 'ผลยี่กี '.DateThai(date('Y/m/d')).PHP_EOL.' JET  รอบที่ '.$yeke_no.' = xxx-xx'.PHP_EOL.' JET VIP รอบที่ '.$yeke_no.'= xxx-xx'
+$str = 'ผลยี่กี '.DateThai(date('Y/m/d')).PHP_EOL.' JET  รอบที่ '.$yeke_no.' = xxx-xx'.PHP_EOL.' JET VIP รอบที่ '.$yeke_no.'= xxx-xx';
 
 $textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder($str);
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
