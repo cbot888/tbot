@@ -10,4 +10,4 @@ foreach($html->find('a[class="postlink"]') as $a) {
  
 print_r($links);
 echo $links;
-echo "Hello LINE BOT";
+echo "Hello LINE BOT...";
