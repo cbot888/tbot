@@ -77,7 +77,7 @@ function file_get_html($url, $use_include_path = false, $context=null, $offset =
     //$contents = retrieve_url_contents($url);
     if (empty($contents) || strlen($contents) > MAX_FILE_SIZE)
     {
-        return false;
+        //return false;
     }
     // The second parameter can force the selectors to all be lowercase.
     $dom->load($contents, $lowercase, $stripRN);
