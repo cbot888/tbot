@@ -12,5 +12,5 @@ foreach($html->find('a[class="postlink"]') as $a) {
 }
  
 print_r($links);
- 
-?>
+echo $links;
+
