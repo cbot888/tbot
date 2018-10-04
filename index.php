@@ -8,7 +8,6 @@ $links = array();
 foreach($html->find('a[class="postlink"]') as $a) {
  $links[] = $a->href;
 }
- 
-print_r($links);
+
 echo $links;
 echo "Hello LINE BOT...";
