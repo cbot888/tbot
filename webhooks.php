@@ -20,9 +20,12 @@ if (!is_null($events['events'])) {
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
 			if(preg_replace('/[[:space:]]+/', '',trim($msg_input)) == '[bot=groupid]')
+			{
 				$text = $event['source']['groupId'];
+				echo $text;
+			}
 			//else if($msg_input == 'grpreport')
-
+				
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
