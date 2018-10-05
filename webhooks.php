@@ -9,6 +9,9 @@ $access_token = 'u4tkJt4cfqqaudtD6OiZWxStQa+I6AwQSb2yEEx8sEs4153Uh3sq8ALf3ACUasA
 $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
+//รับข้อความจากผู้ใช้
+$message = $events['events'][0]['message']['text'];
+
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
 	// Loop through each event
