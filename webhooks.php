@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 			if(preg_replace('/[[:space:]]+/', '',trim($msg_input)) == '[bot=groupid]')
 			{
 				$text = $event['source']['groupId'];
-				echo $text;
+				//echo $text;
 			}
 			//else if($msg_input == 'grpreport')
 				
