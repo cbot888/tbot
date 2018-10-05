@@ -16,7 +16,10 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			$text = '888'.$event['source']['groupId'];
+			if($event['message'] == ok)
+				$text = $event['source']['groupId'];
+			else
+				$text = '888';
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
