@@ -19,7 +19,7 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			if(ereg_replace('[[:space:]]+','',trim($msg_input)) == 'bot->groupid')
+			if(ereg_replace('[[:space:]]+','',trim($msg_input)) == 'bot:groupid')
 				$text = $event['source']['groupId'];
 			//else if($msg_input == 'grpreport')
 				
