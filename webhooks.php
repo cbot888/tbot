@@ -10,7 +10,7 @@ $content = file_get_contents('php://input');
 // Parse JSON
 $events = json_decode($content, true);
 //รับข้อความจากผู้ใช้
-$message = $events['events'][0]['message']['text'];
+$msg_input = $events['events'][0]['message']['text'];
 
 // Validate parsed JSON data
 if (!is_null($events['events'])) {
@@ -19,10 +19,10 @@ if (!is_null($events['events'])) {
 		// Reply only when message sent is in 'text' format
 		if ($event['type'] == 'message' && $event['message']['type'] == 'text') {
 			// Get text sent
-			if($message == 'ok')
+			if($msg_input == 'grpid')
 				$text = $event['source']['groupId'];
-			else
-				$text = '888';
+			//else if($msg_input == 'grpreport')
+				
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
