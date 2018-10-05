@@ -22,7 +22,7 @@ if (!is_null($events['events'])) {
 			if(ereg_replace('[[:space:]]+','',trim($msg_input)) == 'bot:groupid')
 				$text = $event['source']['groupId'];
 			//else if($msg_input == 'grpreport')
-				
+				$text = ereg_replace('[[:space:]]+','',trim($msg_input));
 			// Get replyToken
 			$replyToken = $event['replyToken'];
 
